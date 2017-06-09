@@ -3,8 +3,8 @@ var path = require('path');
 
 // variables
 var isProduction = process.argv.indexOf('-p') >= 0;
-var sourcePath = path.join(__dirname, './app/assets/javascripts');
-var outPath = path.join(__dirname, './app/assets/javascripts/build');
+var sourcePath = path.join(__dirname, './client');
+var outPath = path.join(__dirname, './public/javascripts');
 
 // plugins
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
