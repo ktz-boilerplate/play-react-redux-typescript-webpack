@@ -1,4 +1,3 @@
-import org.openqa.selenium.phantomjs.PhantomJSDriver
 import org.openqa.selenium.remote.DesiredCapabilities
 import org.specs2.mutable._
 import org.specs2.runner._
@@ -16,12 +15,6 @@ class IntegrationSpec extends Specification {
   "Application" should {
 
     "work from within a browser" in new WithBrowser {
-
-      override val webDriver = {
-        val capabilities = new DesiredCapabilities()
-        capabilities.setJavascriptEnabled(true)
-        new PhantomJSDriver(capabilities)
-      }
 
       browser.goTo("http://localhost:" + port)
 
